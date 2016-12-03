@@ -15,6 +15,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 import br.ufpr.lingblocos.util.Observer;
+import java.awt.Polygon;
 
 /**
  *
@@ -98,6 +99,13 @@ public class TelaDesenho implements Observer<MouseAdapterFigura>{
         g.drawOval(x, y, largura, altura);
         tela.repaint();
     }
+    
+    public void desenhaReta(int x, int y, int x1 , int y1){
+        Graphics2D r = imagemAtual.createGraphics();
+        r.setColor(Color.BLACK);
+        r.drawLine(x,y,x1,y1);
+        tela.repaint();
+    }
 
     public int getHeight() {
         return tela.getHeight();
@@ -107,13 +115,27 @@ public class TelaDesenho implements Observer<MouseAdapterFigura>{
         return tela.getWidth();
     }
 
-    public void desenhaTriangulo(int x, int y, int i, int i0) {
+    public void desenhaTriangulo(int x, int y, int x1, int y1) {
+               
+        double distancia;
+        
+        Polygon poligono = new Polygon();
+        int a = (x + x1)/2 ;
+        int b = (y + y1)/2 ;
+        System.out.println(a);
+        poligono.addPoint(x,y);
+        poligono.addPoint(a,b);
+        poligono.addPoint(x1,y);
+        
         Graphics2D g = imagemAtual.createGraphics();
         g.setColor(Color.BLACK);
-        g.drawString("TRIANGULO", x, y);
+        g.drawPolygon(poligono);
+  
+    //    g.drawString("TRIANGULO", x, y);
         tela.repaint();
 
     }
+
 }
     
     

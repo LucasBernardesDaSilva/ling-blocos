@@ -25,7 +25,8 @@ public class MouseAdapterTriangulo extends MouseAdapterFigura {
             pressed = false;
             //AQUI É ONDE VOCÊS DEVEM FAZER A LÓGICA SER CHAMADA,
             //ANTES DE DESENHAR NA TELA
-            tela.desenhaTriangulo(x, y, e.getX() - x, e.getY() - y);
+                        
+            tela.desenhaTriangulo(x, y, e.getX(), y - e.getY() );
         }
     }
     

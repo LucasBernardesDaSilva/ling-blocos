@@ -14,6 +14,7 @@ import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterFigura;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterGire;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterMova;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterRepita;
+import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterReta;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterRetangulo;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterSoma;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterTriangulo;
@@ -69,6 +70,7 @@ public class main {
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.RETANGULO, new MouseAdapterRetangulo(telaDesenho, palco));
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.ELIPSE, new MouseAdapterElipse(telaDesenho, palco));
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.TRIANGULO, new MouseAdapterTriangulo(telaDesenho, palco));
+       relacaoOpcaoFiguraMouse.put(OpcaoFigura.RETA, new MouseAdapterReta(telaDesenho, palco));
        janela.setupMouseAdaptersFigura(relacaoOpcaoFiguraMouse);
        
        //Adicionando relação de opções de blocos com mouse listeners:

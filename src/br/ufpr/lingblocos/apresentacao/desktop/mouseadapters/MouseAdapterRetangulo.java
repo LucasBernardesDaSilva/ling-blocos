@@ -26,7 +26,7 @@ public class MouseAdapterRetangulo extends MouseAdapterFigura {
             pressed = false;
             //AQUI É ONDE VOCÊS DEVEM FAZER A LÓGICA SER CHAMADA,
             //ANTES DE DESENHAR NA TELA
-            palco.inserirAtor(new Retangulo(x, y, e.getX() - x, e.getY() - y));
+            //palco.inserirAtor(new Retangulo(x, y, e.getX() - x, e.getY() - y));
             tela.desenhaRetangulo(x, y, e.getX() - x, e.getY() - y);
         }
     }
